@@ -1,0 +1,82 @@
+{
+  "touch_dev": {
+    "type": "string",
+    "value": ""
+  },
+  "double_tap_time": {
+    "type": "number",
+    "value": 0.3
+  },
+  "primary_output": {
+    "type": "string",
+    "value": ""
+  },
+  "secondary_output": {
+    "type": "string",
+    "value": ""
+  },
+  "second_screen_url": {
+    "type": "string",
+    "value": "http://localhost:3000"
+  },
+  "chromium_profile": {
+    "type": "string",
+    "value": "/data/volumiokiosk-second"
+  },
+  "loopback_out": {
+    "type": "string",
+    "value": "plughw:1,0"
+  },
+  "audio_device": {
+    "type": "number",
+    "value": 2
+  },
+  "volumio_fifo": {
+    "type": "string",
+    "value": "/tmp/stream.mp3"
+  },
+  "next_key": {
+    "type": "string",
+    "value": "n"
+  },
+  "tap_zone_x1": {
+    "type": "number",
+    "value": 0
+  },
+  "tap_zone_x2": {
+    "type": "number",
+    "value": 0.33
+  },
+  "tap_zone_y1": {
+    "type": "number",
+    "value": 0
+  },
+  "tap_zone_y2": {
+    "type": "number",
+    "value": 1
+  },
+  "poll_interval": {
+    "type": "number",
+    "value": 2
+  },
+  "auto_change": {
+    "type": "boolean",
+    "value": false
+  },
+  "preset_duration": {
+    "type": "number",
+    "value": 30
+  },
+  "transition_duration": {
+    "type": "number",
+    "value": 3
+  },
+  "beat_sensitivity": {
+    "type": "number",
+    "value": 1
+  },
+  "fps": {
+    "type": "number",
+    "value": 60
+  }
+}

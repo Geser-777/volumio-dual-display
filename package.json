@@ -1,0 +1,37 @@
+{
+  "name": "dual_display",
+  "version": "1.2.1",
+  "description": "Second display support, with a MilkDrop visualizer on x86",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Konstantin Nabutovsky",
+  "license": "MIT",
+  "repository": "https://github.com/Geser-777/volumio-dual-display",
+  "volumio_info": {
+    "prettyName": "Dual Display",
+    "icon": "fa-desktop",
+    "plugin_type": "user_interface",
+    "architectures": [
+      "armv6",
+      "armv7",
+      "armv8",
+      "x86_amd64"
+    ],
+    "os": [
+      "bookworm"
+    ],
+    "details": "Volumio drives only one display out of the box. This plugin brings up a second one with its own browser window showing the Volumio interface. The front panel keeps the regular kiosk and the touchscreen stays bound to it. On x86 the second display can also be turned into a MilkDrop visualizer driven by the audio actually playing - double tap the panel to switch. Ships with eleven languages; corrections and new translations are welcome, see the README.",
+    "changelog": "1.2.1 - the right mouse button is only switched off while the visualizer is on screen, and not at all without a visualizer; visualizer settings are hidden where there is no visualizer. 1.2.0 - presets and textures are downloaded at install time. 1.1.0 - picture settings for the visualizer. 1.0.0 - first release"
+  },
+  "engines": {
+    "node": ">=8",
+    "volumio": ">=3"
+  },
+  "dependencies": {
+    "fs-extra": "^3.0.1",
+    "kew": "^0.7.0",
+    "v-conf": "^1.4.1"
+  }
+}

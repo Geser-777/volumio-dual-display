@@ -1,0 +1,240 @@
+{
+  "page": {
+    "label": "TRANSLATE.DD_CONFIGURATION"
+  },
+  "sections": [
+    {
+      "id": "section_displays",
+      "element": "section",
+      "label": "TRANSLATE.DD_DISPLAYS",
+      "icon": "fa-desktop",
+      "onSave": {
+        "type": "controller",
+        "endpoint": "user_interface/dual_display",
+        "method": "saveScreens"
+      },
+      "saveButton": {
+        "label": "TRANSLATE.DD_SAVE",
+        "data": [
+          "primary_output",
+          "secondary_output"
+        ]
+      },
+      "content": [
+        {
+          "id": "primary_output",
+          "element": "input",
+          "type": "text",
+          "label": "TRANSLATE.DD_PRIMARY_OUTPUT",
+          "doc": "TRANSLATE.DD_PRIMARY_OUTPUT_DESC",
+          "value": ""
+        },
+        {
+          "id": "secondary_output",
+          "element": "input",
+          "type": "text",
+          "label": "TRANSLATE.DD_SECONDARY_OUTPUT",
+          "doc": "TRANSLATE.DD_SECONDARY_OUTPUT_DESC",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "section_visualizer",
+      "element": "section",
+      "label": "TRANSLATE.DD_VISUALIZER",
+      "icon": "fa-music",
+      "onSave": {
+        "type": "controller",
+        "endpoint": "user_interface/dual_display",
+        "method": "saveVisualizer"
+      },
+      "saveButton": {
+        "label": "TRANSLATE.DD_SAVE",
+        "data": [
+          "double_tap_time",
+          "tap_zone_x2",
+          "auto_change",
+          "preset_duration",
+          "transition_duration",
+          "beat_sensitivity",
+          "fps"
+        ]
+      },
+      "content": [
+        {
+          "id": "double_tap_time",
+          "element": "input",
+          "type": "number",
+          "attributes": [
+            {
+              "step": "0.05"
+            },
+            {
+              "min": "0.15"
+            },
+            {
+              "max": "1"
+            }
+          ],
+          "label": "TRANSLATE.DD_DOUBLE_TAP_TIME",
+          "doc": "TRANSLATE.DD_DOUBLE_TAP_TIME_DESC",
+          "value": 0.3
+        },
+        {
+          "id": "tap_zone_x2",
+          "element": "input",
+          "type": "number",
+          "attributes": [
+            {
+              "step": "0.01"
+            },
+            {
+              "min": "0.05"
+            },
+            {
+              "max": "1"
+            }
+          ],
+          "label": "TRANSLATE.DD_TAP_ZONE",
+          "doc": "TRANSLATE.DD_TAP_ZONE_DESC",
+          "value": 0.33
+        },
+        {
+          "id": "auto_change",
+          "element": "switch",
+          "label": "TRANSLATE.DD_AUTO_CHANGE",
+          "doc": "TRANSLATE.DD_AUTO_CHANGE_DESC",
+          "value": false
+        },
+        {
+          "id": "preset_duration",
+          "element": "input",
+          "type": "number",
+          "attributes": [
+            {
+              "step": "1"
+            },
+            {
+              "min": "5"
+            },
+            {
+              "max": "600"
+            }
+          ],
+          "label": "TRANSLATE.DD_PRESET_DURATION",
+          "doc": "TRANSLATE.DD_PRESET_DURATION_DESC",
+          "value": 30,
+          "visibleIf": {
+            "field": "auto_change",
+            "value": true
+          }
+        },
+        {
+          "id": "transition_duration",
+          "element": "input",
+          "type": "number",
+          "attributes": [
+            {
+              "step": "0.5"
+            },
+            {
+              "min": "0"
+            },
+            {
+              "max": "10"
+            }
+          ],
+          "label": "TRANSLATE.DD_TRANSITION",
+          "doc": "TRANSLATE.DD_TRANSITION_DESC",
+          "value": 3
+        },
+        {
+          "id": "beat_sensitivity",
+          "element": "input",
+          "type": "number",
+          "attributes": [
+            {
+              "step": "0.1"
+            },
+            {
+              "min": "0"
+            },
+            {
+              "max": "2"
+            }
+          ],
+          "label": "TRANSLATE.DD_BEAT",
+          "doc": "TRANSLATE.DD_BEAT_DESC",
+          "value": 1
+        },
+        {
+          "id": "fps",
+          "element": "input",
+          "type": "number",
+          "attributes": [
+            {
+              "step": "1"
+            },
+            {
+              "min": "15"
+            },
+            {
+              "max": "60"
+            }
+          ],
+          "label": "TRANSLATE.DD_FPS",
+          "doc": "TRANSLATE.DD_FPS_DESC",
+          "value": 60
+        }
+      ]
+    },
+    {
+      "id": "section_audio",
+      "element": "section",
+      "label": "TRANSLATE.DD_AUDIO",
+      "icon": "fa-volume-up",
+      "onSave": {
+        "type": "controller",
+        "endpoint": "user_interface/dual_display",
+        "method": "saveAudio"
+      },
+      "saveButton": {
+        "label": "TRANSLATE.DD_SAVE",
+        "data": [
+          "loopback_out",
+          "audio_device"
+        ]
+      },
+      "content": [
+        {
+          "id": "loopback_out",
+          "element": "input",
+          "type": "text",
+          "label": "TRANSLATE.DD_LOOPBACK_OUT",
+          "doc": "TRANSLATE.DD_LOOPBACK_OUT_DESC",
+          "value": "plughw:1,0"
+        },
+        {
+          "id": "audio_device",
+          "element": "input",
+          "type": "number",
+          "attributes": [
+            {
+              "step": "1"
+            },
+            {
+              "min": "0"
+            },
+            {
+              "max": "16"
+            }
+          ],
+          "label": "TRANSLATE.DD_AUDIO_DEVICE",
+          "doc": "TRANSLATE.DD_AUDIO_DEVICE_DESC",
+          "value": 2
+        }
+      ]
+    }
+  ]
+}
