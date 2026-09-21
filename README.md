@@ -61,9 +61,9 @@ sudo systemctl restart volumio
 The restart matters when installing over an earlier version: Volumio keeps
 the old plugin code in memory until it is restarted.
 
-Issues and suggestions: https://github.com/Geser-777/volumio-dual-display/issues
-
 Reboot afterwards: the output layout takes effect when X starts.
+
+Issues and suggestions: https://github.com/Geser-777/volumio-dual-display/issues
 
 ## Picture settings, x86 only
 
@@ -95,10 +95,7 @@ Output order in the list is no good: it differs from board to board and
 does not match the physical connectors.
 
 If the guess is wrong, set the outputs explicitly in the plugin settings —
-that always wins.
-
-If the guess is wrong, set the outputs explicitly in the plugin settings.
-Names come from:
+that always wins. Names come from:
 
 ```
 sudo XAUTHORITY=$(ls -t /tmp/serverauth.* | head -n1) DISPLAY=:0 xrandr
@@ -203,6 +200,11 @@ whichever output is primary at the time, and at boot that can still be
 the second display — the plugin has not reassigned primary to the panel
 yet. The panel itself is left alone: rotating it is up to Touch Display
 or Pi Screen Setup.
+
+**Portrait panels are only partly supported.** The plugin was built and
+tested with ordinary landscape displays. A portrait panel, DSI especially,
+works once its rotation is sorted out, but getting there depends on the
+panel and on the other display plugins rather than on this one.
 
 A portrait panel may need both of them set — Pi Screen Setup rotates at
 boot, so the splash screen comes up the right way round, and Touch
